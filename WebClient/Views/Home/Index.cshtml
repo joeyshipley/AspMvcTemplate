@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<p>Home Page</p>
+
+@section PageLevelScripts
+{
+<script type="text/javascript">
+    $(document).ready(function() {
+        var message = ko.observable("RAWR");
+        console.log(message());
+    });
+</script>
+}
