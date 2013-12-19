@@ -10,7 +10,7 @@ Example source of an alternate Microsoft Web Stack
 - ASP.NET MVC
 - Razor Views
 - Structuremap
-- SQL Server
+- SQL Server - Application
 - ? - In Project Database Builder
 - Fluent NHibernate
 - AutoMapper (If needed)
@@ -24,6 +24,7 @@ Example source of an alternate Microsoft Web Stack
 - ? - Acceptance Test Framework
 - ? - JS Test Framework
 - NUnit Test Framework w/AAA spec style organization
+- SQLite - In Memory Tests
 - Moq
 - AutoMoq
 - Fluent Assertions
