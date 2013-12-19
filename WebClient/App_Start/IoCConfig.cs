@@ -8,7 +8,7 @@ namespace ThinkCraft.WebClient
     {
         public static void RegisterContainer()
         {
-            var container = IoCConfiguration.BuildContainer();
+            var container = IoCConfiguration.Default();
             DependencyResolver.SetResolver(new StructureMapDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new StructureMapDependencyResolver(container);
         }

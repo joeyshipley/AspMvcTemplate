@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System;
+using System.Collections.Generic;
+using NUnit.Framework;
 using StructureMap;
 using ThinkCraft.WebClient.Infrastructure.IoC;
 
@@ -12,10 +14,7 @@ namespace ThinkCraft.Tests.Infrastructure
         [TestFixtureSetUp]
         public virtual void Init()
         {
-            // TODO: create ability to pass in a fake
-            IoCConfiguration.BuildContainer();
-            SUT = ObjectFactory.GetInstance<T>();
-
+            populateSystemUnderTest();
             Arrange();
             Act();
         }
@@ -29,5 +28,22 @@ namespace ThinkCraft.Tests.Infrastructure
         public virtual void Arrange() {}
         public virtual void Act() {}
         public virtual void Finally() {}
+
+        protected void AssignFakes(List<Action<ConfigurationExpression>> fakes)
+        {
+            populateSystemUnderTest(fakes);
+        }
+        
+        private void populateSystemUnderTest()
+        {
+            populateSystemUnderTest(new List<Action<ConfigurationExpression>>());
+        }
+
+        private void populateSystemUnderTest(List<Action<ConfigurationExpression>> fakes)
+        {
+            var container = IoCConfiguration.BuildContainer(fakes);
+            SUT = container.GetInstance<T>();
+        }
+
     }
 }

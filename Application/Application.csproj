@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AccountInteractor.cs" />
+    <Compile Include="Account\Entities\User.cs" />
     <Compile Include="Account\IAccountInteractor.cs" />
+    <Compile Include="Account\Repositories\IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
