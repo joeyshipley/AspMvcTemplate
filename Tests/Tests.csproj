@@ -88,7 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Account\UserRepositoryTests.cs" />
-    <Compile Include="ExampleTest.cs" />
     <Compile Include="Infrastructure\ClassicalTestBase.cs" />
     <Compile Include="Infrastructure\InMemorySessionProvider.cs" />
     <Compile Include="Infrastructure\MockistTestBase.cs" />
