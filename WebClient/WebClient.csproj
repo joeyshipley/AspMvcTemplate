@@ -155,6 +155,7 @@
   <ItemGroup>
     <Content Include="Assets\Scripts\Dependencies\jquery-2.0.3.js" />
     <Content Include="Assets\Scripts\Dependencies\modernizr.custom.js" />
+    <Content Include="Assets\Scripts\Tests\ExampleTests.js" />
     <Content Include="Assets\Styles\layout.css">
       <DependentUpon>layout.less</DependentUpon>
     </Content>

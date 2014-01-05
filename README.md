@@ -33,9 +33,10 @@ Example source of an alternate Microsoft Web Stack
 
 - Git tool
 - Visual Studio 2013
-- ReSharper (Optional)
+- ReSharper 8 (VS Plugin)
 - Web Essentials 2013 (VS2013 Plugin)
 - Typescript (VS2013 Plugin)
+- PhantomJS & Change settings of ReSharper to point to this executable.
 
 #### Browser Requirements
 
