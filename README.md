@@ -22,7 +22,7 @@ Example source of an alternate Microsoft Web Stack
 - ? - Responsive Images
 - VS Bundler for Minification/Combining of CSS & JS
 - ? - Acceptance Test Framework
-- ? - JS Test Framework
+- Jasmine - PhantomJS & Resharper Runner
 - NUnit Test Framework w/AAA spec style organization
 - SQLite - In Memory Tests
 - Moq
