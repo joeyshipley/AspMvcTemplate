@@ -10,6 +10,7 @@ namespace ThinkCraft.WebClient
         {
             registerScriptsModernizr(bundles);
             registerScriptsCore(bundles);
+            registerScriptsPages(bundles);
             registerStylesCore(bundles);
 
             // BundleTable.EnableOptimizations = true;
@@ -26,10 +27,19 @@ namespace ThinkCraft.WebClient
         {
             bundles.Add(new ScriptBundle("~/Scripts/core").Include(
                 ASSET_FOLDER + "/Scripts/Dependencies/jquery-2.0.3.js",
-                ASSET_FOLDER + "/Scripts/Dependencies/knockout-3.0.0.js",
-                ASSET_FOLDER + "/Scripts/Application/Application.js"
+                ASSET_FOLDER + "/Scripts/Dependencies/knockout-3.0.0.js"
             ));
         }
+
+        private static void registerScriptsPages(BundleCollection bundles)
+        {
+            const string path = ASSET_FOLDER + "/Scripts/PageScripts";
+
+            bundles.Add(new ScriptBundle("~/Scripts/LoginPage").Include(
+                path + "/LoginPage.js"
+            ));
+        }
+
         private static void registerStylesCore(BundleCollection bundles)
         {
             bundles.Add(new StyleBundle("~/Styles/core").Include(

@@ -16,5 +16,4 @@ var Application;
     })(Application.Account || (Application.Account = {}));
     var Account = Application.Account;
 })(Application || (Application = {}));
-/// <reference path="LoginComponent.ts" />
-/// <reference path="Account/_namespace.ts" />
+/// <reference path="../Application/Account/LoginComponent.ts" />

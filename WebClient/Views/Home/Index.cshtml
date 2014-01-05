@@ -6,10 +6,12 @@
 
 @section PageLevelScripts
 {
-<script type="text/javascript">
-    $(document).ready(function() {
-        var message = ko.observable("RAWR");
-        console.log(message());
-    });
-</script>
+    @Scripts.Render("~/Scripts/LoginPage")
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var message = ko.observable("RAWR");
+            console.log(message());
+        });
+    </script>
 }

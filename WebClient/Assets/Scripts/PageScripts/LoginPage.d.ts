@@ -3,7 +3,5 @@ declare module Application.Account {
         constructor(data?: any);
     }
 }
-declare module Application.Account {
-}
-declare module Application {
+declare module LoginPage {
 }

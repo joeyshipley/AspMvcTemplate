@@ -195,8 +195,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Assets\Scripts\Application\Account\LoginComponent.ts" />
-    <TypeScriptCompile Include="Assets\Scripts\Application\Account\_namespace.ts" />
-    <TypeScriptCompile Include="Assets\Scripts\Application\Application.ts" />
+    <TypeScriptCompile Include="Assets\Scripts\PageScripts\LoginPage.ts" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj">
@@ -238,7 +237,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>tsc --declaration --target ES5 --out "$(ProjectDir)\Assets\Scripts\Application\application.js" "$(ProjectDir)\Assets\Scripts\Application\application.ts"</PostBuildEvent>
+    <PostBuildEvent>tsc --declaration --target ES5 --out "$(ProjectDir)\Assets\Scripts\PageScripts\LoginPage.js" "$(ProjectDir)\Assets\Scripts\PageScripts\LoginPage.ts"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
