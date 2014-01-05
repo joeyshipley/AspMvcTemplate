@@ -11,7 +11,6 @@ Example source of an alternate Microsoft Web Stack
 - Razor Views
 - Structuremap
 - SQL Server - w/empty database (config currently looks for ThinkCraft db)
-- ? - In Project Database Builder
 - Fluent NHibernate
 - AutoMapper (If needed)
 - TypeScript
