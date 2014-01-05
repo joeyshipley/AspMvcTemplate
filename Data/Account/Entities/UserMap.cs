@@ -13,6 +13,9 @@ namespace ThinkCraft.Data.Account.Entities
             Map(x => x.Email)
                 .Length(320)
                 .Not.Nullable();
+            Map(x => x.Name)
+                .Length(100)
+                .Nullable();
         }
     }
 }

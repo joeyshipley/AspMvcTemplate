@@ -1,6 +1,7 @@
 ﻿using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
+using NHibernate.Tool.hbm2ddl;
 
 namespace ThinkCraft.Data.Infrastructure
 {
@@ -35,7 +36,9 @@ namespace ThinkCraft.Data.Infrastructure
                 .Mappings(m => 
                     m.FluentMappings.AddFromAssemblyOf<SessionProvider>()
                 )
+                .ExposeConfiguration(cfg => new SchemaUpdate(cfg).Execute(false, true))
                 .BuildSessionFactory();
         }
+
     }
 }
