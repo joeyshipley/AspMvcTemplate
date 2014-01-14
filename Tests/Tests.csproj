@@ -96,6 +96,8 @@
   <ItemGroup>
     <Folder Include="Application\" />
     <Folder Include="Webclient\" />
+    <Folder Include="x64\" />
+    <Folder Include="x86\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -116,14 +118,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="x64\SQLite.Interop.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="x86\SQLite.Interop.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="Lib\SQLite\x64\SQLite.Interop.dll" />
+    <Content Include="Lib\SQLite\x86\SQLite.Interop.dll">
+      <CustomToolNamespace>x86</CustomToolNamespace>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)\lib\SQLite\x64\SQLite.Interop.dll" "$(ProjectDir)bin\x64\"  /F /R /Y /I
+xcopy "$(ProjectDir)\lib\SQLite\x86\SQLite.Interop.dll" "$(ProjectDir)bin\x86\"  /F /R /Y /I
+</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
